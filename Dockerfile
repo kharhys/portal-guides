@@ -2,9 +2,6 @@ FROM node:7-alpine
 
 RUN apk add --update alpine-sdk python-dev
 
-COPY exec.sh /exec.sh
-RUN chmod +x /exec.sh
-
 # Fix bug https://github.com/npm/npm/issues/9863
 RUN cd $(npm root -g)/npm \
   && npm install fs-extra \
@@ -16,21 +13,20 @@ RUN npm install node-gyp -g
 
 # Create & set app directory
 RUN mkdir -p /usr/src/app
-WORKDIR /usr/src/app
-
-# Install app dependencies
-COPY package.json /usr/src/app/
-RUN npm install
 
 # Bundle app source
 COPY . /usr/src/app 
+# COPY package.json /usr/src/app/
+
+WORKDIR /usr/src/app
+
+# Install app dependencies
+RUN npm install
 
 # Build nuxt 
-RUN npm run build
+RUN npm run build 
 
 CMD [ "npm", "start" ]
 
 # ENTRYPOINT ["node"]
-
 EXPOSE 3000
-
