@@ -20,13 +20,14 @@ COPY . /usr/src/app
 
 WORKDIR /usr/src/app
 
-# Install app dependencies
+# Install deps
 RUN npm install
 
 # Build nuxt 
-RUN npm run build 
-
-CMD [ "npm", "start" ]
+#RUN npm run build 
 
 # ENTRYPOINT ["node"]
 EXPOSE 3000
+
+# Start app
+CMD [ "npm", "start" ]

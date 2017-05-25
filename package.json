@@ -12,8 +12,7 @@
     "build": "node ./ace nuxtbuild",
     "start": "cross-env NODE_ENV=production node server.js",
     "precommit": "npm run lint",
-    "lint": "standard && eslint --ext .js,.vue resources/",
-    "heroku-prebuild": "apt install node-gyp"
+    "lint": "standard && eslint --ext .js,.vue resources/"
   },
   "dependencies": {
     "adonis-ace": "^3.0.6",
