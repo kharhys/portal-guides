@@ -1,4 +1,2 @@
-#!/bin/sh
+#!/bin/node
 
-npm install --no-bin-links 
-node-gyp rebuild
