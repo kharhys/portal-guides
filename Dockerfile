@@ -27,7 +27,7 @@ COPY . /usr/src/app
 
 CMD [ "npm", "start" ]
 
-ENTRYPOINT ["node"]
+# ENTRYPOINT ["node"]
 
 EXPOSE 3000
 
