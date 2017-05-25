@@ -24,7 +24,7 @@ WORKDIR /usr/src/app
 RUN npm install
 
 # Build nuxt 
-#RUN npm run build 
+RUN npm run build 
 
 # ENTRYPOINT ["node"]
 EXPOSE 3000
