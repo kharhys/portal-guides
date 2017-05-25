@@ -23,7 +23,7 @@ COPY package.json /usr/src/app/
 RUN npm install
 
 # Bundle app source
-COPY . /usr/src/app
+COPY . /usr/src/app 
 
 CMD [ "npm", "start" ]
 
