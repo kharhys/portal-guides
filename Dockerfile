@@ -14,9 +14,18 @@ RUN npm install npm@4 -g
 RUN npm install node-gyp -g
 # RUN node-gyp install
 
-# WORKDIR /usr/src/app
+# Create & set app directory
+RUN mkdir -p /usr/src/app
+WORKDIR /usr/src/app
 
-# CMD ["/exec.sh"]
+# Install app dependencies
+COPY package.json /usr/src/app/
+RUN npm install
+
+# Bundle app source
+COPY . /usr/src/app
+
+CMD [ "npm", "start" ]
 
 ENTRYPOINT ["node"]
 
