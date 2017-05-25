@@ -12,7 +12,7 @@ RUN cd $(npm root -g)/npm \
   
 RUN npm install npm@4 -g
 RUN npm install node-gyp -g
-RUN node-gyp install
+# RUN node-gyp install
 
 WORKDIR /usr/src/app
 
