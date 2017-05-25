@@ -16,7 +16,7 @@ RUN npm install node-gyp -g
 
 # WORKDIR /usr/src/app
 
-CMD ["/exec.sh"]
+# CMD ["/exec.sh"]
 
 ENTRYPOINT ["node"]
 
