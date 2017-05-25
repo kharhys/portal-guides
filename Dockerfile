@@ -17,3 +17,8 @@ RUN npm install node-gyp -g
 # WORKDIR /usr/src/app
 
 CMD ["/exec.sh"]
+
+ENTRYPOINT ["node"]
+
+EXPOSE 3000
+
