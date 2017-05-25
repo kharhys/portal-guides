@@ -25,6 +25,9 @@ RUN npm install
 # Bundle app source
 COPY . /usr/src/app 
 
+# Build nuxt 
+RUN npm build
+
 CMD [ "npm", "start" ]
 
 # ENTRYPOINT ["node"]
