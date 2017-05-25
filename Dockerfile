@@ -14,6 +14,6 @@ RUN npm install npm@4 -g
 RUN npm install node-gyp -g
 # RUN node-gyp install
 
-WORKDIR /usr/src/app
+# WORKDIR /usr/src/app
 
 CMD ["/exec.sh"]
