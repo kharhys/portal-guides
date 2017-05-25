@@ -26,7 +26,7 @@ RUN npm install
 COPY . /usr/src/app 
 
 # Build nuxt 
-RUN npm build
+RUN npm run build
 
 CMD [ "npm", "start" ]
 
