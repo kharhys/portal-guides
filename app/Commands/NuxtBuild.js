@@ -36,10 +36,16 @@ class NuxtBuild extends Command {
   * handle (args, options) {
     let config = Config.get('nuxt')
     config.dev = false
-    this.nuxt = new Nuxt(config)
-    console.log('this.nuxt ==>', this.nuxt)
-    this.info('Building nuxt.js application...')
-    yield this.nuxt.build()
+    // this.nuxt = new Nuxt(config)
+    // console.log('this.nuxt ==>', this.nuxt)
+    // this.info('Building nuxt.js application...')
+    // yield this.nuxt.build()
+    (new Nuxt(config)).then(nuxt => {
+      this.nuxt = nuxt
+      console.log('this.nuxt ==>', this.nuxt)
+      this.info('Building nuxt.js application...')
+      this.nuxt.build()
+    })
   }
 
 }
