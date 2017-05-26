@@ -26,7 +26,7 @@ class NuxtController {
 
       let config = Config.get('nuxt')
       config.dev = Env.get('NODE_ENV') === 'development'
-      console.log('config', config)
+      //console.log('config', config)
 
       let nuxt = await new Nuxt(config)
       ctx.nuxt = nuxt
@@ -35,7 +35,7 @@ class NuxtController {
       return nuxt
 
     }, function done (e, res) {
-      console.log('res', res) 
+      //console.log('res', res) 
     })
 
   }
