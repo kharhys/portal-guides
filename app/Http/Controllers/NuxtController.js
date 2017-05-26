@@ -9,35 +9,36 @@ const alwaysDone = require('always-done')
 class NuxtController {
 
   constructor () {
-    // let config = Config.get('nuxt')
-    // config.dev = Env.get('NODE_ENV') === 'development'
-    // this.nuxt = new Nuxt(config)
-    // if (Env.get('NODE_ENV') === 'development') {
-    //   this.nuxt.build()
-    // }
-    let ctx = this;
-    alwaysDone(async function () {
-      // let config = Config.get('nuxt')
-      // config.dev = Env.get('NODE_ENV') === 'development'
-      // this.nuxt = new Nuxt(config)
-      // if (Env.get('NODE_ENV') === 'development') {
-      //   this.nuxt.build()
-      // }
+    let config = Config.get('nuxt')
+    config.dev = Env.get('NODE_ENV') === 'development'
+    this.nuxt = new Nuxt(config)
+    if (Env.get('NODE_ENV') === 'development') {
+      this.nuxt.build()
+    }
+    
+    // let ctx = this;
+    // alwaysDone(async function () {
+    //   // let config = Config.get('nuxt')
+    //   // config.dev = Env.get('NODE_ENV') === 'development'
+    //   // this.nuxt = new Nuxt(config)
+    //   // if (Env.get('NODE_ENV') === 'development') {
+    //   //   this.nuxt.build()
+    //   // }
 
-      let config = Config.get('nuxt')
-      config.dev = Env.get('NODE_ENV') === 'development'
-      //console.log('config', config)
+    //   let config = Config.get('nuxt')
+    //   config.dev = Env.get('NODE_ENV') === 'development'
+    //   //console.log('config', config)
 
-      let nuxt = await new Nuxt(config)
-      ctx.nuxt = nuxt
+    //   let nuxt = await new Nuxt(config)
+    //   ctx.nuxt = nuxt
 
-      if (config.dev ) { await nuxt.build()  }      
-      return nuxt
+    //   if (config.dev ) { await nuxt.build()  }      
+    //   return nuxt
 
-    }, function done (e, res) {
-      //console.log('res', res) 
-      console.log('alwaysDone NuxtController constructor')
-    })
+    // }, function done (e, res) {
+    //   //console.log('res', res) 
+    //   console.log('alwaysDone NuxtController constructor')
+    // })
 
   }
 
