@@ -27,7 +27,7 @@ RUN npm install
 RUN npm run build 
 
 # ENTRYPOINT ["node"] 
-EXPOSE 3000 2000 80 443 22
+EXPOSE 80 443 22 3000 2000 
 
 # Start app
 CMD [ "npm", "start" ]
