@@ -36,6 +36,7 @@ class NuxtController {
 
     }, function done (e, res) {
       //console.log('res', res) 
+      console.log('alwaysDone NuxtController constructor')
     })
 
   }

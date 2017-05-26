@@ -51,12 +51,13 @@ class NuxtBuild extends Command {
     // })
 
     alwaysDone(async function () {
-      console.log('config', config)
+      //console.log('config', config)
       let nuxt = await new Nuxt(config)
       await nuxt.build()
       return nuxt
     }, function done (e, res) {
-      console.log('res', res) // => 'foobar' 
+      //console.log('res', res) // => 'foobar' 
+      console.log('alwaysDone NuxtBuild ')
     })
 
   }
