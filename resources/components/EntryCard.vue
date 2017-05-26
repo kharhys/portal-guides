@@ -62,7 +62,7 @@
                 <div class="content">    
                     <span class="fs"> Kenya Dairy Board </span>
                     <span> &nbsp; - &nbsp; </span>
-                    <span class="sn"> Quality milk for health </span>    
+                    <span class="sn"> Quality  milk for health </span>    
                 </div>    
             </div>    
         </div>    
