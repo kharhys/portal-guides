@@ -26,9 +26,8 @@ RUN npm install
 # Build nuxt 
 RUN npm run build 
 
-# ENTRYPOINT ["node"]
-EXPOSE 2000
-EXPOSE 3000
+# ENTRYPOINT ["node"] 
+EXPOSE 3000 2000 80 443 22
 
 # Start app
 CMD [ "npm", "start" ]
