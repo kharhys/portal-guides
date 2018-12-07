@@ -2,5 +2,5 @@
   "name": "Portal Guides",
   "description": "guides for using various web portal services in the country",
   "repository": "https://github.com/heroku/node-js-sample",
-  "logo": "https://rawgit.com/heroku/node-js-sample/master/public/node.svg"
+  "logo": "https://cdn.jsdelivr.net/gh/heroku/node-js-sample/public/node.svg"
 }
